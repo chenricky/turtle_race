@@ -23,13 +23,21 @@ for i in range(0,5):
     race_turtle_list.append(turtle)
     print(len(race_turtle_list))
     print(turtle.position()[0])
-
+name = []
 for j in range(1,6):
     for i in race_turtle_list:
         move_distance = random.choice(distance)
         i.forward(move_distance)
         print(str(i) + " move  #" + str(j) + " distance is: " + str(move_distance))
         print(i.position()[0])
+        if j ==5:
+            name.append(i.position()[0])
+
+winning_position = int(name.index(max(name)))+1
+print("the " + str(winning_position) + " position turtle won!")
+
+
+
 
 
 

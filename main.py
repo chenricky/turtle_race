@@ -24,14 +24,16 @@ for i in range(0,5):
     print(len(race_turtle_list))
     print(turtle.position()[0])
 name = []
-for j in range(1,6):
+for j in range(1,10):
     for i in race_turtle_list:
         move_distance = random.choice(distance)
         i.forward(move_distance)
+
         print(" move  #" + str(j) + " distance is: " + str(move_distance))
         print("current turtle X position is: " + str(i.position()[0]))
-        if j ==5:
+        if j ==9:
             name.append(i.position()[0])
+            i.write("final position: " + str(move_distance))
 
 winning_position = int(name.index(max(name)))+1
 

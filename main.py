@@ -22,6 +22,7 @@ for i in range(0,5):
     turtle.goto(x=-230, y=start_position[i])
     race_turtle_list.append(turtle)
     print(len(race_turtle_list))
+    print(turtle.color())
     print(turtle.position()[0])
 name = []
 for j in range(1,10):
